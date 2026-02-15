@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "welpai"
+version = "0.1.0"
+authors = [
+  { name="WelpDev", email="nihiluserboy@gmail.com" },
+]
+description = "WelpAi — Бесплатная экосистема ИИ нового поколения."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "openai",
+    "click",
+]
+
+[project.scripts]
+welpai = "welpai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
